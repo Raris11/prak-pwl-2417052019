@@ -5,19 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Kelas extends Model
+class MataKuliah extends Model
 {
     use HasFactory;
 
-    protected $table = 'kelas';
+    protected $table = 'mata_kuliah';
     protected $guarded = ['id'];
 
-    public function user()
-    {
-        return $this->hasMany(UserModel::class, 'kelas_id');
-    }
-
-    public function getKelas()
+    public function getAllMK()
     {
         return $this->all();
     }
