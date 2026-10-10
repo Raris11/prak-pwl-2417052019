@@ -1,6 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
+
+@if (session('success'))
+    <div class="container pt-3">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert"
+                    aria-label="Tutup"></button>
+        </div>
+    </div>
+@endif
+
     <div class="container py-5">
         <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
             <div>
