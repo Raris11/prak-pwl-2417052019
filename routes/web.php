@@ -18,3 +18,6 @@ Route::get('/user', [UserController::class, 'index'])->name('user.index');
 route::get('/mata_kuliah', [MataKuliahController::class, 'index']);
 route::get('/mata_kuliah/create', [MataKuliahController::class, 'create']) ->name('mata_kuliah.create');
 route::post('/mata_kuliah', [MataKuliahController::class, 'store']) ->name('mata_kuliah.store');
+route::get('/mata_kuliah/{id}/edit', [MataKuliahController::class, 'edit']) ->name('mata_kuliah.edit');
+route::put('/mata_kuliah/{id}', [MataKuliahController::class, 'update']) ->name('mata_kuliah.update');
+route::delete('/mata_kuliah/{id}', [MataKuliahController::class, 'destroy']) ->name('mata_kuliah.destroy');
